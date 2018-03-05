@@ -27,7 +27,7 @@ while True:
         v="%.2f" % x
         print(v)
         file.write(str(i)+","+str(v)+"\n")
-        time.sleep(0.05)
+        time.sleep(1)
     
     def animate(i):
          graph_data = open('adc.txt','r').read()
