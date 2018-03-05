@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from matplotlib import style
 
-style.use('fivethirtyeight')
+style.use('ggplot')
 fig=plt.figure()
 ax1=fig.add_subplot(1,1,1)
 adc=Adafruit_ADS1x15.ADS1115()
@@ -41,4 +41,7 @@ def animate(i):
     ax1.clear()
     ax1.plot(xs, ys)
 ani = animation.FuncAnimation(fig, animate, interval=1000)
+plt.xlabel('Titik pengukuran')
+plt.ylabel("Tegangan (mv)")
+plt.title('Plotting Tegangan Forward model')
 plt.show()
